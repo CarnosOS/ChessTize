@@ -1,0 +1,2 @@
+{ 
+"short_name": "ChessTize", "name": " ChessTize Chess", "icons": [ { "src": "img/icons/wK.png", "sizes": "48x48" }], "start_url": "index.html" }
