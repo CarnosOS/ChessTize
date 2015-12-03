@@ -22,7 +22,7 @@ $(function(){
 try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
 navigator.vibrate(300);
-$("#statusnet").html(CafeSync.capitalizeFirstLetter(navigator.connection.type));
+
 
 if(window.Notification){ window.Notification.requestPermission(function(stat){
         TogetherJS.send({
