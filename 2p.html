@@ -15,6 +15,23 @@
 <link rel="manifest" href="manifest.json">
 
 <script src="https://togetherjs.com/togetherjs-min.js"></script> <script src="js/cafesync.js"></script> <script src="js/cafesync-lib.js"></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '978122172262965',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <script type="text/javascript">
 $(function(){
    
@@ -22,6 +39,7 @@ $(function(){
 try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
 navigator.vibrate(300);
+
 
 
 if(window.Notification){ window.Notification.requestPermission(function(stat){
