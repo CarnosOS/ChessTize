@@ -26,7 +26,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+      
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -94,12 +94,6 @@ navigator.vibrate(300);
 
 
 
-if(window.Notification){ window.Notification.requestPermission(function(stat){
-        TogetherJS.send({
-            type: "playernotes",
-            stat: stat
-        });
-        TogetherJS.hub.on("playernotes", function(msg) {
 
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
@@ -215,7 +209,7 @@ board = ChessBoard('boardchess', cfg);
 updateStatus();
 }catch(e){
 alert(e.message);
-} 
+} hhgbb
 });
 </script>
 </head>
