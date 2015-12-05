@@ -86,7 +86,7 @@
 </script>
 <script type="text/javascript">
 $(function(){
-   
+   var TogetherJSConfig_hubBase = "https://cafesync-twoh-acosf.c9users.io";
     var notes = [];
 try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
@@ -100,20 +100,6 @@ if(window.Notification){ window.Notification.requestPermission(function(stat){
             stat: stat
         });
         TogetherJS.hub.on("playernotes", function(msg) {
-           if(window.Notification){ notes.push(new Notification("Player Ready", {
-                body: "Game alerts accepted"
-            }));
-    }
-        });
-    });
-
-    }
-var board,
-  game = new Chess(),
-  statusEl = $('#status'),
-  fenEl = $('#fen'),
-  pgnEl = $('#pgn');
-
 
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
