@@ -1,3 +1,4 @@
 var TogetherJSConfig_toolName = "CafeSync";
 TogetherJSConfig_inviteFromRoom = true;
-  var TogetherJSConfig_hubBase = "https://cafesync-twoh-acosf.c9users.io";b
+  var TogetherJSConfig_hubBase = "https://cafesync-twoh-acosf.c9users.io";
+  
