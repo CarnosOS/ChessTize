@@ -88,6 +88,12 @@
 $(function(){
    var TogetherJSConfig_hubBase = "https://cafesync-twoh-acosf.c9users.io";
     var notes = [];
+    var board = null;
+     var game = new Chess(),
+  statusEl = $('#status'),
+  fenEl = $('#fen'),
+  pgnEl = $('#pgn');
+
 try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
 navigator.vibrate(300);
