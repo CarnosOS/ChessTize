@@ -99,8 +99,9 @@ try{
 navigator.vibrate(300);
 
 
-
-
+ Notification.requestPermission(function(status){
+  var knew = new Notification("ChessTize", {body:"ChessTize 1.1"});
+});
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
@@ -154,9 +155,7 @@ var onSnapEnd = function() {
 
 };
  TogetherJS.hub.on("chessupdate",function(msg){
- window.Notification.requestPermission(function(status){
-  var knew = new Notification ("ChessTize", {body:"ChessTize 1.1"});
-});
+
                 
           game.load(msg.fen);
           board.position(msg.fen);
