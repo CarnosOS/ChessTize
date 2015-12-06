@@ -54,10 +54,11 @@ border: none;
 margin-left: 10px;
 margin-bottom: 10px;
 }
-
 #score1{
  font-family: Trebuchet MS;
 }
-p{
+#score2{
+ font-family: Trebuchet MS;
+}p{
     font-family: Segoe UI;
 }
