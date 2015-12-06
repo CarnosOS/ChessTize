@@ -112,7 +112,11 @@ $("#score2").html(scorecard.score);var clock = $('.time').FlipClock({
   countdown: true
 });
 clock.setTime(1200);
+TogetherJS.send({type:"clockstart"});
+TogetherJS.on("clockstart",function(msg){
+  
 clock.start();
+});
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
 var onDragStart = function(source, piece, position, orientation) {
