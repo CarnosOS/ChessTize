@@ -97,7 +97,7 @@ try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
 navigator.vibrate(300);
 
-notes.push(" Chess Starts Now ");
+notes.push(new Notification (" Chess Starts Now "));
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
