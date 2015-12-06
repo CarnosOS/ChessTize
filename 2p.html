@@ -11,7 +11,7 @@
 <script src="js/chessboard-0.3.0.min.js"></script>
 <script src="js/chess.js"></script>
 <script src="js/firebase.js"></script>
-<link rel="manifest" href="/manifest.json">
+<script src="js/score.min.js"></script><link rel="manifest" href="/manifest.json">
 
 <script src="https://cafesync-twoh-acosf.c9users.io/togetherjs-min.js"></script> <script src="js/cafesync.js"></script> <script src="js/cafesync-lib.js"></script>
 <script>
@@ -101,8 +101,10 @@ navigator.serviceWorker.register('sw.js');
 navigator.serviceWorker.ready.then(function (registration){
 registration.showNotification("Chess Starts Now");
 });
-var score = new Score(); 
-
+var scores = [];
+scores.push(new Score()); 
+scores.push(new Score()); 
+$("#score").html(score.scorecard().score);
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
