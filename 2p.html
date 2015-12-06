@@ -113,7 +113,7 @@ $("#score2").html(scorecard.score);var clock = $('.time').FlipClock({
 });
 clock.setTime(1200);
 TogetherJS.send({type:"clockstart"});
-TogetherJS.on("clockstart",function(msg){
+TogetherJS.hub.on("clockstart",function(msg){
   
 clock.start();
 });
