@@ -105,8 +105,9 @@ var scores = [];
 scores.push(new Score()); 
 scores.push(new Score()); 
 var scorecard = scores[0].scorecard();
-$("#score").html(scorecard.score);
-var clock = $('.time').FlipClock({
+var scorecard2 = scores[1].scorecard();
+$("#score1").html(scorecard.score);
+$("#score2").html(scorecard.score);var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
 });
@@ -241,8 +242,7 @@ alert(e.message);
   data-show-faces="true">
 </div>
 <div id="boardchess"></div>
-<div id="score1">0</div>
-
+<div id="score1"></div><div id="score2"></div>
 
 
 </body>
