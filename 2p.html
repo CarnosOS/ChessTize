@@ -97,9 +97,8 @@ try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
 navigator.vibrate(300);
 
+$.notify(" Game started "); 
 
- 
-});
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
@@ -122,7 +121,7 @@ clock.stop();
 $(".reset-timer").click(function(){
 clock.reset();
 clock.setTime(1200);
-$.notify (" Game started ");
+
 });
 var onDrop = function(source, target) {
   // see if the move is legal
