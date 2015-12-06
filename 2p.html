@@ -95,25 +95,21 @@ $(function(){
 
 try{
    var chesstize_data = new Firebase("https://capital-pursuit-live.firebaseio.com/");
-navigator.vibrate(300);
 
 var scores = [];
 scores.push(new Score()); 
 scores.push(new Score()); 
 var scorecard = scores[0].scorecard();
 var scorecard2 = scores[1].scorecard();
-$("8#score1").html(scorecard.score);
+$("#score1").html(scorecard.score);
 $("#score2").html(scorecard.score);
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
 });
 clock.setTime(1200);
-TogetherJS.send({type:"clockstart"});
-TogetherJS.hub.on("clockstart",function(msg){
-  
-clock.start();
-});
+  clock.start();
+ 
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
 var onDragStart = function(source, piece, position, orientation) {
@@ -219,7 +215,7 @@ var cfg = {
 };
 board = ChessBoard('boardchess', cfg);
 
-updateStatus();
+uhgpdateStatus();
 }catch(e){
 alert(e.message);
 } 
