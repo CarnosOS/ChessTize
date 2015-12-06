@@ -104,7 +104,8 @@ registration.showNotification("Chess Starts Now");
 var scores = [];
 scores.push(new Score()); 
 scores.push(new Score()); 
-$("#score").html(scores[0].scorecard().score);
+var scorecard = scores[0].scorecard();
+$("#score").html(scorecard.score);
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
