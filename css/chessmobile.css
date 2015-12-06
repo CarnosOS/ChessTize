@@ -62,6 +62,10 @@ font-weight: bolder;
 }
 #score2{
  font-family: Trebuchet MS;
+  background-color: lightblue;
+font-size: 60px;
+font-weight: bolder;
+
 }p{
     font-family: Segoe UI;
 }
