@@ -99,7 +99,7 @@ navigator.vibrate(300);
 navigator.serviceWorker.register('sw.js');
 
 navigator.serviceWorker.ready.then(function (registration){
-registration.showNotification("Chess Starts Now"));
+registration.showNotification("Chess Starts Now");
 });
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
