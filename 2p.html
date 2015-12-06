@@ -108,6 +108,9 @@ var clock = $('.time').FlipClock({
 clock.setTime(1200);
   clock.start();
  
+ TogetherJS.hub.on("togetherjs.hello",function(msg){
+    TogetherJS.reinitialize();
+ });
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
 var onDragStart = function(source, piece, position, orientation) {
