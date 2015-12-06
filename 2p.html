@@ -100,7 +100,7 @@ navigator.vibrate(300);
 
 
  Notification.requestPermission(function(status){
-  var knew = new Notification("ChessTize", {body:"ChessTize 1.1"});
+  notes(new Notification("ChessTize", {body:"ChessTize 1.1"}));
 });
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
