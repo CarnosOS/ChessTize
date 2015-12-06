@@ -4,8 +4,7 @@
 <title>Chesstize</title>
 <script src="js/jquery-1.11.3.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="css/chessmobile.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.notification/1.0.2/jquery.notification.min.js"></script><link rel="stylesheet" href="css/chessmobile.css"/>
 <link rel="stylesheet" href="css/chessboard-0.3.0.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css"/>
 <script src=" https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
@@ -99,8 +98,7 @@ try{
 navigator.vibrate(300);
 
 
- Notification.requestPermission(function(status){
-  notes(new Notification("ChessTize", {body:"ChessTize 1.1"}));
+ 
 });
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
@@ -124,6 +122,7 @@ clock.stop();
 $(".reset-timer").click(function(){
 clock.reset();
 clock.setTime(1200);
+$.notify (" Game started ");
 });
 var onDrop = function(source, target) {
   // see if the move is legal
