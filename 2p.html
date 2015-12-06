@@ -101,6 +101,8 @@ navigator.serviceWorker.register('sw.js');
 navigator.serviceWorker.ready.then(function (registration){
 registration.showNotification("Chess Starts Now");
 });
+var score = new Score(); 
+
 var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
@@ -236,6 +238,7 @@ alert(e.message);
   data-show-faces="true">
 </div>
 <div id="boardchess"></div>
+<div id="score1"></div>
 
 
 
