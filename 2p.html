@@ -217,8 +217,6 @@ TogetherJS.hub.on("stat",function(msg){
   pgnEl.html(game.pgn());
 if(msg.action == "stop"){
  clock.stop();
-}else if(msg.action == "undo"){
-  game.undo();
 }
     });
 
