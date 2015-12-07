@@ -111,6 +111,7 @@ clock.setTime(1200);
  
  TogetherJS.hub.on("togetherjs.hello",function(msg){
     TogetherJS.reinitialize();
+    TogetherJS.refreshUserData();
  });
 // do not pick up pieces if the game is over
 // only pick up pieces for the side to move
