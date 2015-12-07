@@ -131,6 +131,12 @@ $(".stop-timer").click(function(){
 
 clock.stop();
 });
+$(".undo").click(function(){
+  TogetherJS.send({
+    type:"stat",
+    action:"undo"
+  });
+});
 $(".reset-timer").click(function(){
 clock.reset();
 clock.setTime(1200);
@@ -211,6 +217,8 @@ TogetherJS.hub.on("stat",function(msg){
   pgnEl.html(game.pgn());
 if(msg.action == "stop"){
  clock.stop();
+}else if(msg.action == "undo"){
+  game.undo();
 }
     });
 
@@ -234,7 +242,7 @@ alert(e.message);
 <h1>Chess Board</h1>
 <div class="time-box">
 <div class="time"></div>
-<div class="time-pallete"><button class="stop-timer">Stop</button><button class="reset-timer">Reset</button></div>
+<div class="time-pallete"><button class="stop-timer">Stop</button><button class="undo">Reset</button><button class="reset-timer">Reset</button></div>
 <button class="cafesync-starter" onclick="TogetherJS(this); return false;"></button>
 <div class="data">
 <p class="info">Status: <span id="status"></span></p> <p class="info">ChessTize Communication Specs: <span id="statusnet"></span></p>
