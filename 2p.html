@@ -93,8 +93,7 @@ $(function(){
     var board = null;
      var game = new Chess(),
   statusEl = $('#status'),
-  fenEl = $('#fen'),
-  pgnEl = $('#pgn');
+
 var TogetherJSConfig_findRoom = {prefix: "chesstize_cafesync",max:2};
 try{
   
@@ -213,8 +212,7 @@ var action = "";
 };
 TogetherJS.hub.on("stat",function(msg){ 
          statusEl.html(msg.stats);
-         fenEl.html(game.fen());
-  pgnEl.html(game.pgn());
+        
 if(msg.action == "stop"){
  clock.stop();
 }
@@ -243,10 +241,9 @@ alert(e.message);
 <div class="time-pallete"><button class="stop-timer">Stop</button><button class="undo">Reset</button><button class="reset-timer">Reset</button></div>
 <button class="cafesync-starter" onclick="TogetherJS(this); return false;"></button>
 <div class="data">
-<p class="info">Status: <span id="status"></span></p> <p class="info">ChessTize Communication Specs: <span id="statusnet"></span></p>
-<span id="score1"></span><span id="score2"></span>
-<p class="info"><h1>FEN:</h1><span id="fen"></span></p>
-<p class="info"><h1>PGN:</h1> <span id="pgn"></span></p></div>
+<p class="info">Status: <span id="status"></span></p> <p class="info">ChessTize Communication Specs: <span id="statusnet"></span></p><div class="infotray"><h1>Scores</h1>
+<span id="score1"></span><span id="score2"></span></div>
+></div>
 </div>
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
 <div
