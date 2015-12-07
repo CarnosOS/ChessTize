@@ -15,6 +15,7 @@ color: white;
 position: relative;
 float: right;
 height: 100%;
+width: 40%;
 }
 .stop-timer{
 background-color: red;
