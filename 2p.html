@@ -10,6 +10,9 @@
 <script src=" https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
 <script src="js/chessboard-0.3.0.min.js"></script>
 <script src="js/chess.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 <script src="js/score.min.js"></script><link rel="manifest" href="/manifest.json">
 <script src="https://togetherjs.com/togetherjs-min.js"></script>
 <script src="js/cafesync.js"></script> <script src="js/cafesync-lib.js"></script>
@@ -106,6 +109,7 @@ var clock = $('.time').FlipClock({
   clockFace: "MinuteCounter",
   countdown: true
 });
+$("data").accordion();
 clock.setTime(1200);
   clock.start();
  
@@ -232,10 +236,12 @@ alert(e.message);
 <div class="time"></div>
 <div class="time-pallete"><button class="stop-timer">Stop</button><button class="reset-timer">Reset</button></div>
 <button class="cafesync-starter" onclick="TogetherJS(this); return false;"></button>
+<div class="data">
 <p class="info">Status: <span id="status"></span></p> <p class="info">ChessTize Communication Specs: <span id="statusnet"></span></p>
 <span id="score1"></span><span id="score2"></span>
-<p class="info">FEN: <span id="fen"></span></p>
+<p class="info"><h1>FEN:</h1><span id="fen"></span></p>
 <p class="info">PGN: <span id="pgn"></span></p></div>
+</div>
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
 <div
   class="fb-like"
