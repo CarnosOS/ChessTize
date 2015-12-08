@@ -129,8 +129,7 @@ $(".stop-timer").click(function(){
 
 clock.stop();
 });
-window.setInt
-alert(game.moves());
+$(".moves").html(game.moves());
 $(".undo").click(function(){
   TogetherJS.send({
     type:"stat",
