@@ -129,7 +129,8 @@ $(".stop-timer").click(function(){
 
 clock.stop();
 });
-$(".moves").html(game.moves());
+var moves = game.moves();
+$(".moves").html(moves.split(','));
 $(".undo").click(function(){
   TogetherJS.send({
     type:"stat",
