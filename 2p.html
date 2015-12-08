@@ -131,7 +131,7 @@ clock.stop();
 });
 var moves = game.moves();
 for(var i=0;i<moves.length; i++){
-$(".moves").html("<li>" + moves[i] + "</li>");
+$(".moves").html("<li class='move'>" + moves[i] + "</li>");
 }
 $(".undo").click(function(){
   TogetherJS.send({
